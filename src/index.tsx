@@ -119,7 +119,7 @@ export const TagsInput = ({
 
       <input
         className={cc("rti--input", RTIInput)}
-        type={type === "number" ? type : "text"}
+        type={type === "number" || type === "text" ? type : "text"}
         name={name}
         placeholder={placeHolder}
         onKeyDown={handleOnKeyUp}
