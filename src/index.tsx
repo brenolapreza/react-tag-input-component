@@ -6,6 +6,7 @@ import Tag from "./tag";
 
 export interface TagsInputProps {
   name?: string;
+  type?: string;
   placeHolder?: string;
   value?: string[];
   onChange?: (tags: string[]) => void;
@@ -64,6 +65,7 @@ const defaultSeprators = ["Enter"];
 
 export const TagsInput = ({
   name,
+  type,
   placeHolder,
   value,
   onChange,
@@ -117,7 +119,7 @@ export const TagsInput = ({
 
       <input
         className={cc("rti--input", RTIInput)}
-        type="text"
+        type={type !== undefined ? type : "text"}
         name={name}
         placeholder={placeHolder}
         onKeyDown={handleOnKeyUp}
