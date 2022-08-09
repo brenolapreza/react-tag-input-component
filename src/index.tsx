@@ -6,7 +6,7 @@ import Tag from "./tag";
 
 export interface TagsInputProps {
   name?: string;
-  type?: string;
+  type?: "number" | "text";
   placeHolder?: string;
   value?: string[];
   onChange?: (tags: string[]) => void;
